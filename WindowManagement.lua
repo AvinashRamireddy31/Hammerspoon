@@ -77,19 +77,10 @@ function moveAllWindowsToDisplay(number)
   local allWindows = hs.window.allWindows()
   local allScreens = hs.screen.allScreens()
   for _, win in ipairs(allWindows) do
-    -- win.moveToScreen(displayScreen, false, true) -- Move display
-
     -- Change Window position to display position
     local nextScren = allScreens[number]
     win:moveToScreen(nextScren)
     win:maximize()
-
-    local frame = win:frame()
-    local screenFrame = displayScreen:frame()
-
-    frame.x = screenFrame.x
-    frame.y = screenFrame.y
-    win:setFrame(frame)
   end
 end
 
