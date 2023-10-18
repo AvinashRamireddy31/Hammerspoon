@@ -68,12 +68,6 @@ end
 
 -- Function to move all open windows to the next display
 function moveAllWindowsToDisplay(number)
-  local displayScreen = hs.screen.allScreens()[number]
-
-  if not displayScreen then
-      return
-  end
-
   local allWindows = hs.window.allWindows()
   local allScreens = hs.screen.allScreens()
   for _, win in ipairs(allWindows) do
@@ -98,6 +92,10 @@ function bindWindows(modifier)
   bind(modifier, "Right", moveToRight)
   bind(modifier, "Up", moveToTop)
   bind(modifier, "Down", moveToBottom)
+
+  bind(modifier , "1",  moveAllWindowsToPrimaryDisplay)
+  bind(modifier , "2",  moveAllWindowsToSecondaryDisplay)
+
   bind({"alt", "shift","cmd"} , "Left",  moveAllWindowsToPrimaryDisplay)
   bind({"alt", "shift","cmd"} , "Right",  moveAllWindowsToSecondaryDisplay)
 end
