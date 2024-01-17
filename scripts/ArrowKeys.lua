@@ -14,7 +14,7 @@ function pressDownArrow()
   hs.eventtap.keyStroke({}, "down")
 end
 
-function bindKeys(modifier)
+function bindArrowKeys(modifier)
   bind(modifier, "j", pressLeftArrow)
   bind(modifier, "l", pressRightArrow)
   bind(modifier, "i", pressUpArrow)

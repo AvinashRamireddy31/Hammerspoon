@@ -1,9 +1,10 @@
-local arrowKeys = require('ArrowKeys')
-local common = require('Common')
+local arrowKeys = require('scripts.ArrowKeys')
+local common = require('scripts.Common')
 local modifier = {"alt", "shift"}
-local openapps = require("OpenApps")
-local switchmonitors = require("SwitchMonitors")
-local windowmanagement = require('WindowManagement')
+local hyper = {'cmd', 'alt', 'ctrl', 'shift'}
+local openapps = require("scripts.OpenApps")
+local switchmonitors = require("scripts.SwitchMonitors")
+local windowmanagement = require('scripts.WindowManagement')
 
 -- Open apps
 openAllApps(modifier)
@@ -15,4 +16,4 @@ bind(modifier, "tab", moveToNextScreen)
 bindWindows(modifier)
 
 -- Arrow Keys
-bindKeys(modifier)
+bindArrowKeys(hyper)

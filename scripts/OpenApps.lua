@@ -1,5 +1,3 @@
-local common = require('Common')
-
 function open(name)
   return function()
     hs.application.launchOrFocus(name)
