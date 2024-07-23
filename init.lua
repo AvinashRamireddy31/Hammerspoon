@@ -12,8 +12,9 @@ openAllApps(modifier)
 openAllApps(hyper)
 bind("cmd", "E", open("Finder"))
 
-createMouseTap(3, hyper, open("Safari"))
-createMouseTap(4, hyper, open("Diarium"))
+local modifier2 = {"alt", "ctrl"}
+createMouseTap(3, modifier2, open("Safari"))
+createMouseTap(4, modifier2, open("Diarium"))
 
 -- Switch Monitors
 bind(modifier, "tab", moveToNextScreen)

@@ -26,6 +26,9 @@ function createMouseTap(button, modifiers, func)
 
               -- Call your function
               func()
+
+              -- Consume the event to prevent it from propagating
+              return true
           else
               -- Log that the modifier key was not active
               print("Mouse button " .. button .. " was pressed without modifier keys!")
