@@ -99,3 +99,20 @@ function bindWindows(modifier)
   bind({"alt", "shift","cmd"} , "Left",  moveAllWindowsToPrimaryDisplay)
   bind({"alt", "shift","cmd"} , "Right",  moveAllWindowsToSecondaryDisplay)
 end
+
+function bindWindowSwitchShortcut(modifiers, key)
+  if type(modifiers) ~= "table" then
+      print("Error: 'modifiers' must be a table, got", type(modifiers))
+      return
+  end
+  if type(key) ~= "string" then
+      print("Error: 'key' must be a string, got", type(key))
+      return
+  end
+
+  print("Binding shortcut:", hs.inspect(modifiers), key)
+
+  hs.hotkey.bind(modifiers, key, function()
+      hs.eventtap.keyStroke({"cmd"}, "`", 0) -- Simulates Cmd + `
+  end)
+end

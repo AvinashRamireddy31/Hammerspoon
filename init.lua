@@ -16,3 +16,8 @@ bind(modifier, "tab", moveToNextScreen)
 
 -- Window Management
 bindWindows(modifier)
+bindWindows(hyper)
+
+-- print("Modifiers:", hs.inspect(modifier))
+-- print("Key:", 'q')
+bindWindowSwitchShortcut(modifier, 'q')

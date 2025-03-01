@@ -20,5 +20,4 @@ function openAllApps(modifier)
   bind(modifier, "S", open("Safari"))
 
   bind(modifier, "V", open("Code"))
-  -- bind(modifier, "V", open("Visual Studio Code"))
 end
