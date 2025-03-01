@@ -112,7 +112,7 @@ function bindWindowSwitchShortcut(modifiers, key)
 
   print("Binding shortcut:", hs.inspect(modifiers), key)
 
-  hs.hotkey.bind(modifiers, key, function()
+  bind(modifiers, key, function()
       hs.eventtap.keyStroke({"cmd"}, "`", 0) -- Simulates Cmd + `
   end)
 end
