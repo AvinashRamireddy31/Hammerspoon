@@ -100,7 +100,7 @@ function bindWindows(modifier)
   bind({"alt", "shift","cmd"} , "Right",  moveAllWindowsToSecondaryDisplay)
 end
 
-function bindWindowSwitchShortcut(modifiers, key)
+function bindWindowSwitch(modifiers, key)
   if type(modifiers) ~= "table" then
       print("Error: 'modifiers' must be a table, got", type(modifiers))
       return

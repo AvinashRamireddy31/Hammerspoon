@@ -20,4 +20,4 @@ bindWindows(hyper)
 
 -- print("Modifiers:", hs.inspect(modifier))
 -- print("Key:", 'q')
-bindWindowSwitchShortcut(modifier, 'q')
+bindWindowSwitch(modifier, 'q')
